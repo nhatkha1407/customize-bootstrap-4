@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/example_1.css">
+
+  <title>Customize Bootstrap 4</title>
+</head>
+
+<body class="page-demo">
+  <div class="page-wrapper container d-flex">
+    <form class="form-signin needs-validation m-auto" novalidate>
+      <div class="text-center mb-4">
+        <h1 class="h3 mb-3 font-weight-normal">Login Form</h1>
+        <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a
+            href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a>
+        </p>
+      </div>
+
+      <div class="form-group was-validated">
+        <input class="form-control" type="text" required="">
+        <div class="invalid-feedback">
+          Username is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="password" value="11111122333">
+      </div>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck1">
+        <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+      </div>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <div class="input-group mb-3">
+        <select class="custom-select" id="inputGroupSelect01">
+          <option selected>Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" type="submit">Sign in</button>
+      <button class="btn btn-link" type="submit">Sign up</button>
+      <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2019</p>
+    </form>
+  </div>
+</body>
+</html>

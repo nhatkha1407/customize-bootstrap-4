@@ -1,0 +1,9 @@
+.modal-body {
+  color: rgba($black, .6);
+}
+.modal-footer {
+  padding: rem(8);
+  > * {
+    margin: 0;
+  }
+}

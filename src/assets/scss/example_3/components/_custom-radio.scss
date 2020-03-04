@@ -1,0 +1,25 @@
+.custom-radio {
+  .custom-control-label {
+
+    &::before,
+    &::after {
+      width: rem(20);
+      height: rem(20);
+    }
+
+    &::after {
+      border: 2px solid $border-color;
+      border-radius: $custom-radio-indicator-border-radius;
+    }
+  }
+
+  .custom-control-input:checked~.custom-control-label {
+    &::before {
+      background-color: transparent;
+    }
+
+    &::after {
+      border-color: $primary;
+    }
+  }
+}

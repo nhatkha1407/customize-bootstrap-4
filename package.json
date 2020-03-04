@@ -1,20 +1,22 @@
 {
-  "name": "theming-bootstrap-4",
+  "name": "customize-bootstrap-4",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nhatkha1407/theming-bootstrap-4.git"
+    "url": "git+https://github.com/nhatkha1407/customize-bootstrap-4.git"
   },
   "keywords": [
     "bootstrap",
     "theming"
   ],
   "author": "Whoosh",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nhatkha1407/theming-bootstrap-4/issues"
+    "url": "https://github.com/nhatkha1407/customize-bootstrap-4/issues"
   },
-  "homepage": "https://github.com/nhatkha1407/theming-bootstrap-4#readme",
+  "homepage": "w-bootstrap4.netlify.com",
+  "browserslist": [
+    "> 1%"
+  ],
   "dependencies": {
     "bootstrap": "^4.4.1",
     "browser-sync": "^2.26.7",

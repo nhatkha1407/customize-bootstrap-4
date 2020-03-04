@@ -1,0 +1,98 @@
+// https://material-components.github.io/material-components-web-catalog/#/component/button
+.btn {
+  text-transform: uppercase;
+  letter-spacing: $btn-letter-spacing;
+  min-width: 64px;
+  &:not([class*=btn-]) {
+    color: $primary;
+    @include hover {
+      color: $primary;
+    }
+    padding-right: rem(8);
+    padding-left: rem(8);
+  }
+}
+
+.btn-link {
+  padding-right: rem(8);
+  padding-left: rem(8);
+
+  @include hover {
+    text-decoration: none;
+    background-color: rgba($primary, .04);
+    color: $primary;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: none;
+  }
+
+  &.btn:not(:disabled):not(.disabled):active,
+  &.btn:not(:disabled):not(.disabled).active,
+  .show>&.dropdown-toggle {
+    box-shadow: none;
+    background-color: rgba($primary, .12);
+  }
+}
+
+@mixin button-property($value) {
+  @include button-variant(
+    $value, $value,
+    rgba($value, .86), rgba($value, .86),
+    rgba($value, .86), rgba($value, .86)
+  );
+
+  @include hover {
+    @include box-shadow($btn-focus-box-shadow);
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show>&.dropdown-toggle {
+    background-color: rgba($value, .66);
+  }
+}
+
+@each $color,
+$value in $theme-colors {
+  .btn-#{$color} {
+    @include button-property($value);
+  }
+
+  .btn-#{$color}-rounded {
+    @include button-property($value);
+    border-radius: 100px;
+  }
+}
+
+
+
+@mixin button-outline-property($value) {
+  @include button-outline-variant($value, $value, rgba($value, .04));
+  border-width: $border-width;
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show>&.dropdown-toggle {
+    color: $value;
+    background-color: rgba($value, .12);
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+@each $color,
+$value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-property($value);
+  }
+
+  .btn-outline-#{$color}-rounded {
+    @include button-outline-property($value);
+    border-width: $border-width;
+    border-radius: 100px;
+  }
+}
